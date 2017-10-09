@@ -1,53 +1,47 @@
 ---
 layout: default
 ---
-
-<aside class="sidebar">
-  <header>
-    <div class="about">
-      <div class="cover-author-image">
-        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
-      </div>
-      <div class="author-name">{{site.author}}</div>
-      <p>{{site.about-author}}</p>
-    </div>
-  </header> <!-- End Header -->
-  <footer>
-    <section class="contact">
-      <h3 class="contact-title">Contact me</h3>
-      <ul>
-        {% if site.twitter %}
-          <li><a href="https://twitter.com/{{ site.twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        {% else %}
-          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        {% endif %}
-        {% if site.facebook %}
-          <li><a href="https://facebook.com/{{ site.facebook }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        {% else %}
-          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        {% endif %}
-        {% if site.github %}
-          <li class="github"><a href="http://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i></a></li>
-        {% else %}
-          <li class="github"><a href="http://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-        {% endif %}
-        {% if site.linkedin %}
-          <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        {% else %}
-          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-        {% endif %}
-        {% if site.email %}
-          <li class="email"><a href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
-        {% else %}
-          <li class="email"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-        {% endif %}
-      </ul>
-    </section> <!-- End Section Contact -->
-    <div class="copyright">
-      <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
-    </div>
-  </footer> <!-- End Footer -->
-</aside> <!-- End Sidebar -->
-<div class="content-box clearfix">
-  {{ content }}
+<div class="col-xs-12 col-sm-12 col-md-2">
+   <div class="sidebar">
+      <header>
+        <div class="about">
+          <div class="cover-image">
+            <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
+          </div>
+          <div class="author-name">{{site.author}}</div>
+          <p>{{site.about-author}}</p>
+        </div>
+      </header>
+      <footer>
+        <section class="contact"></section>
+        <div class="copyright">
+          <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
+        </div>
+      </footer>
+  </div>
 </div>
+<div class="col-xs-12 col-sm-12 col-md-10 main-item">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 backimg-item">
+      
+      <!-- <div class="category-sample">
+        <h4>文章分类：</h4>
+          {% for category in site.categories %}
+          <ul class="nav nav-pills" role="tablist">
+            <li role="presentation" class="presentation"><a href="{{ site.baseurl}}/category/{{ category.first }}.html">{{category.first}}<span class="badge">{{category.last.size}}</span></a></li>
+          </ul>
+          {% endfor %}
+      </div> -->
+      
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 font-item">
+      <div class="articles-list">
+        <ul class="list">
+        {{ content }}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div id="return_top"><span class="glyphicon glyphicon-chevron-up text-center"></span></div>

@@ -1,16 +1,19 @@
-title: Hello, world! I'm David Freeman
+title: welcome to X & G
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-permalink: ':title/'
+
+#
+
+
 baseurl: "/jekyll" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+author: 韦小宝 # add your name
+author-img: weixiaobao.jpg # add your photo
+about-author: 我是一个专注于前端开发的web开发人员。总是渴望不断学习前端技术，不断提升我的专业技能。 # add description
 twitter: # add your Twitter handle
 facebook: # add your Facebook handle
 github: artemsheludko # add your Github handle
@@ -25,10 +28,24 @@ analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
+highlighter: rouge
+excerpt_separator: <!--excerpt-->
 plugins:
   - jekyll-paginate
-
-paginate: 8
-paginate_path: "/page/:num"
+# 分页
+#permalink: /:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title
+paginate: 6
+paginate_path: "/article/:num"
+#paginate: 8
+#paginate_path: "/page/:num"
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+collections:
+ common:
+  output: true
+  permalink: /:collection/:title
+ ui:
+  output: true
+  permalink: /:collection/:title
