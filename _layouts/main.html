@@ -23,16 +23,18 @@ layout: default
 <div class="col-xs-12 col-sm-12 col-md-10 main-item">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3 backimg-item">
-      
-      <!-- <div class="category-sample">
-        <h4>文章分类：</h4>
-          {% for category in site.categories %}
-          <ul class="nav nav-pills" role="tablist">
-            <li role="presentation" class="presentation"><a href="{{ site.baseurl}}/category/{{ category.first }}.html">{{category.first}}<span class="badge">{{category.last.size}}</span></a></li>
-          </ul>
-          {% endfor %}
-      </div> -->
-      
+      <div class="category-sample" id="casa">
+        {% for category in site.categories %}
+        <div role="presentation" class="presentation">
+          <h4>{{ category | first }}</h4><span class="badge">{{ category | last | size }}</span>
+        </div>
+        <ul class="arc-list">
+            {% for post in category.last %}
+                <li><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a><span>{{ post.date | date:"%m-%d"}}</span></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+      </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-9 font-item">
       <div class="articles-list">

@@ -672,7 +672,46 @@ a.newer-posts:hover {
   text-decoration: underline;
   opacity: .8;
 }
+.presentation{
+  float: left;
+  width: 100%;
+  background: #e7e7e7;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius:10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+      margin-bottom: 6px;
+}
+.presentation h4{
+  float: left;
+}
+.presentation .badge{
+  float: right;
+  margin-top: 12px;
 
+}
+.arc-list{
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+.arc-list li{
+  float: left;
+  border-bottom: 1px dashed #b7b7b7;
+  width: 100%;
+}
+.arc-list span{
+  float: right;
+}
+.arc-list a{
+  display: block;
+  width: 75%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  float: left;
+}
 
 @media (max-width: 1024px) {
     .sidebar{
@@ -707,6 +746,9 @@ a.newer-posts:hover {
         margin: 1% !important;
         max-height: 346px;
     }
+    .category-sample{
+      max-height: 220px;
+    }
 }
 @media (max-width: 414px) {
     h2{font-size: 16px}
@@ -725,9 +767,10 @@ a.newer-posts:hover {
         width: 100%;
         margin: 0 !important;
     }
+    .category-sample{
+      max-height: 200px;
+    }
 }
-
-
 @media only screen and (max-width: 992px) {
   .cd-fixed-bg.cd-bg-2 {background-image:none;  }
   .post {
