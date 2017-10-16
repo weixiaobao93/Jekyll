@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<div class="col-xs-12 col-sm-12 col-md-2">
+   <div class="sidebar">
+      <header>
+        <div class="about">
+          <div class="cover-image">
+            <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
+          </div>
+          <div class="author-name">{{site.author}}</div>
+          <p>{{site.about-author}}</p>
+        </div>
+      </header>
+      <footer>
+        <section class="contact"></section>
+        <div class="copyright">
+          <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
+        </div>
+      </footer>
+  </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-10 main-item">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 backimg-item">
+      <div class="category-sample" id="casa">
+        {% for category in site.categories %}
+        <div role="presentation" class="presentation">
+          <h4>{{ category | first }}</h4><span class="badge">{{ category | last | size }}</span>
+        </div>
+        <ul class="arc-list">
+            {% for post in category.last %}
+                <li><a href="{{ site.baseurl }}{{post.url}}">{{ post.title }}</a><span>{{ post.date | date:"%m-%d"}}</span></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 font-item">
+      <div class="articles-list">
+        <ul class="list">
+        {{ content }}
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div id="return_top"><span class="glyphicon glyphicon-chevron-up text-center"></span></div>
