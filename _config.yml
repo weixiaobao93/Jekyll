@@ -1,0 +1,48 @@
+title: 韦小宝
+description: 记录我的前端之路。
+
+#
+
+
+baseurl: "/jekyll" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Author Settings
+author: 韦小宝 # add your name
+author-img: weixiaobao.jpg # add your photo
+about-author: 现专注于web前端开发，学习更多的前端知识，不断提升前端技术。 # add description
+twitter: # add your Twitter handle
+facebook: # add your Facebook handle
+github: artemsheludko # add your Github handle
+linkedin: # add your Linkedin handle
+email: # add your Email address
+
+# Disqus
+discus-identifier: mr-brown # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: <!--excerpt-->
+plugins:
+  - jekyll-paginate
+# 分页
+#permalink: /:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title
+paginate: 8
+paginate_path: "/article/:num"
+#paginate: 8
+#paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+collections:
+ common:
+  output: true
+  permalink: /:collection/:title
+ ui:
+  output: true
+  permalink: /:collection/:title
