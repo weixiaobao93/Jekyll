@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeiXiaobao's CV</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.particleground.min.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="particles"></div>
+<div id="backZ"></div>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <img id="headImg" src="img/header.jpg" alt="headImg">
+            <h3 id="name">韦小宝</h3>
+            <h5>希望做一个优秀的前端开发人员</h5>
+            <small>现专注于WEB前端开发。在不断的学习前端知识，提升自身的专业技能。</small>
+            <p><a target="_blank" href="mailto:work_wxb@sina.com">work_wxb@sina.com</a></p>
+        </section>
+        <section>
+            <h3 class="title">专业技能</h3>
+            <p>
+                <span class="l3"> jQuery </span>
+                <span class="l4"> CSS </span>
+                <span class="l2"> HTML </span>
+            </p>
+            <p>
+                <span class="l4"> Photoshop </span>
+                <span class="l2"> BootStrap </span>
+                <span class="l1"> JavaScript </span>
+            </p>
+            <p>
+                <span class="l2"> Git </span>
+                <span class="l4"> flash </span>
+            </p>
+        </section>
+        <section>
+            <section data-transition="zoom">
+                <h3 class="title">个人项目</h3>
+                <p>↓</p>
+            </section>
+            <section class="items">
+                <h3 class="title">个人博客</h3>
+                <img src="img/itemImg.png"/>
+                <p class="p1">博客使用Jekyll&nbsp;+&nbsp;GitHub Pages 搭建，使用Bootstrap前端框架制作的博客主题，界面简洁,有不错的交互体验，以后自己也会坚持写博客，记录一些在工作中遇到的知识难点。</p>
+                <p>个人博客地址：<a target="_blank" href="http://weixiaobao93.github.io/jekyll/">http://weixiaobao93.github.io/jekyll/</a></p>
+            </section>
+        </section>
+        <section>
+            <h3 class="title">教育背景</h3>
+            <p>广西职业技术学院&nbsp;&nbsp;&nbsp;计算机应用技术</p>
+            <p class="date">2012.09 – 2015.06</p>
+        </section>
+        <section class="worked">
+            <h3 class="title">工作经历</h3>
+            <p class="small_title">2015.09--2016.12&nbsp;&nbsp;&nbsp;&nbsp;前端程序员</p>
+            <p class="small_title">主要负责：</p>
+            <p class="cont">负责公司旗下所有医疗网站的前端维护与开发，与美工相互沟通完成网页定稿，然后切图并精确还原PSD设计图样式。</p>
+            <br>
+            <p class="small_title">2015.03--2015.08&nbsp;&nbsp;&nbsp;&nbsp;PHP程序员（实习）</p>
+            <p class="small_title">主要负责：</p>
+            <p>
+                <p class="cont">1、Ecshop商城网站页面改版与页面维护。</p>
+                <p class="cont">2、服务器故障处理，客户的内部服务器故障处理与日常维护。</p>
+                <p class="cont">3、PHP框架部分功能修改与开发。</p>
+                <p class="cont">4、约谈客户，记录客户的要求并制作相关WORD说明文档。</p>
+             </p>
+        </section>
+        <section class="talk">
+            <p>目前兴趣都集中在前端开发，在学习更多的前端知识，不断提升前端技术使产品拥有更好的交互体验。同时，能掌握一项技术可以让我更加充满干劲。</p>
+            <p>任何事都喜欢亲力亲为，全力以赴的去做<br>喜欢篮球和游泳</p>
+        </section>
+    </div>
+</div>
+<div id="downResume">
+    <p>下载简历</p>
+    <p>↓</p>
+    <a target="_blank" href="resume/weixiaobao_resume.pdf">PDF版简历</a>
+    <a target="_blank" href="word/weixiaobao_resume.docx">Word版简历</a>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        var time = 0;
+        $('#downResume').mouseenter(function () {
+            if (time == 0){
+                time = 1;var index = setInterval(function () {time--;if (time == 0){clearInterval(index);}},1000);
+                $('#downResume').animate({height:"120px"},300);
+            }
+            else {
+                alert("操作过快");
+            }
+        }).mouseleave(function () {
+            $('#downResume').animate({height:"30px"},300);
+        });
+    };
+</script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme,
+        transition: 'concave',
+        mouseWheel: true,
+        slideNumber: true,
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
